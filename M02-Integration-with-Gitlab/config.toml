@@ -1,0 +1,43 @@
+concurrent = 1
+check_interval = 0
+
+[session_server]
+  session_timeout = 1800
+
+[[runners]]
+  name = "DESKTOP-KL79C13"
+  url = "http://localhost"
+  id = 38
+  token = "JZobrEM1bcrysYXsbPi3"
+  token_obtained_at = 2022-10-28T04:40:33Z
+  token_expires_at = 0001-01-01T00:00:00Z
+  executor = "shell"
+  shell = "powershell"
+  [runners.custom_build_dir]
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+    [runners.cache.azure]
+
+[[runners]]
+  name = "DESKTOP-KL79C13"
+  url = "http://localhost"
+  id = 39
+  token = "zJfWxcDxiWsEdKgFHZsh"
+  token_obtained_at = 2022-10-28T05:01:48Z
+  token_expires_at = 0001-01-01T00:00:00Z
+  executor = "docker"
+  [runners.custom_build_dir]
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+    [runners.cache.azure]
+  [runners.docker]
+    tls_verify = false
+    image = "docker:dind"
+    privileged = false
+    disable_entrypoint_overwrite = false
+    oom_kill_disable = false
+    disable_cache = false
+    volumes = ["/var/run/docker.sock:/var/run/docker.sock"]
+    shm_size = 0
