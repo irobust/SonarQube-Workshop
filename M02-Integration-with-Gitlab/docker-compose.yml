@@ -39,7 +39,7 @@ services:
       - publicnet
 
   sonarqube-db:
-    image: postgres:15.2-alpine3.17
+    image: postgres:17-alpine
     hostname: postgresql
     container_name: postgresql
     environment:
