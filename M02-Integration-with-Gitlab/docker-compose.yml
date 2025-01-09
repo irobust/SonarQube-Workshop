@@ -6,7 +6,8 @@ services:
     hostname: 'gitlab.example.com'
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://gitlab.example.com'
+        external_url 'http://localhost'
+        puma['worker_processes'] = 0
     ports:
       - '80:80'
       - '443:443'
