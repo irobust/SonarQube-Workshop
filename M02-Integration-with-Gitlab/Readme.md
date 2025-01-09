@@ -12,3 +12,8 @@ docker run -d --name gitlab-runner --restart always \
 ```
 sudo docker exec -it gitlab-runner gitlab-runner register
 ```
+
+### Gitlab Register
+```
+gitlab-runner register --url=http://localhost --token=[TOKEN] --docker-network-mode=host
+```
